@@ -42,7 +42,7 @@ node_modules
 to .gitignore
 
 
-#### Set up jQuery, Popper.js, and Bootstrap (v4.5.2)
+### Set up jQuery, Popper.js, and Bootstrap (v4.5.2)
 ```
 npm install jquery@3.5.1 popper.js@1.16.1
 npm install bootstrap@4.5.2
