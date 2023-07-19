@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/secretagentan/project-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/secretagentan/project-portfolio/issues"
+  },
+  "homepage": "https://github.com/secretagentan/project-portfolio#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
