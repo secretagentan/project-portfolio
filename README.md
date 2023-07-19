@@ -32,8 +32,10 @@ npm start
 ```
 
 #### Set up .gitignore
-- Create file .gitignore
-- Add the text 
+```
+touch .gitignore
+```
+Add the text 
 ```
 node_modules
 ```
