@@ -144,6 +144,5 @@ Update script object in package.json:
     "start": "npm run watch:all",
     "watch:scss": "onchange 'css/*.scss' -- npm run scss",
     "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
-},
 ```
 
