@@ -16,8 +16,7 @@ git push -u origin main
 npm init
 npm install lite-server --save-dev
 ```
-
-#### Edit package.json
+Edit package.json
 ```
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,13 +24,12 @@ npm install lite-server --save-dev
     "lite": "lite-server"
 },
 ```
-
-#### Running lite-server
+RUN: lite-server
 ```
 npm start
 ```
 
-### Set up .gitignore
+### .gitignore
 ```
 touch .gitignore
 ```
@@ -42,7 +40,7 @@ node_modules
 to .gitignore
 
 
-### Set up jQuery, Popper.js, and Bootstrap (v4.5.2)
+### jQuery, Popper.js, and Bootstrap (v4.5.2)
 ```
 npm install jquery@3.5.1 popper.js@1.16.1
 npm install bootstrap@4.5.2
@@ -63,7 +61,7 @@ npm install bootstrap@4.5.2
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 ```
 
-### Set up Font-Awesome and Bootstrap-Social
+### Font-Awesome & Bootstrap-Social
 ```
 npm install font-awesome@4.7.0
 npm install bootstrap-social@5.1.1
@@ -115,7 +113,7 @@ For M1 Mac:
 },
 ```
 
-#### Compile: .scss to .css
+#### COMPILE: .scss to .css
 ```
 npm run scss
 ```
@@ -125,7 +123,7 @@ Create the following folder/file:
 ```
 js/scripts.js
 ```
-Add the "js/scripts.js" src below the scripts under the </footer> tag: 
+[*INCOMPLETE*] Add the "js/scripts.js" src below the scripts under the </footer> tag: 
 ```
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -133,7 +131,7 @@ Add the "js/scripts.js" src below the scripts under the </footer> tag:
 <script src="js/scripts.js"></script>
 ```
 
-### Set up onchange & parallelshell 
+### Onchange & Parallelshell 
 Inside project folder:
 ```
 npm install --save-dev onchange@7.0.0
@@ -146,3 +144,78 @@ Update script object in package.json:
 "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
 ```
 
+### Copyfiles: Copy Font-Awesome fonts
+Install copyfiles module (use sudo if this doesn't work):
+```
+npm install --save-dev copyfiles@2.2.0
+```
+Update the scripts object in package.json:
+```
+"copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+```
+
+### Imagemin-CLI: Compress and minify images
+Install imagemin-cli module (use sudo if doesn't work):
+```
+npm install --save-dev imagemin-cli@5.1.0
+```
+Update scripts in package.json: 
+```
+"imagemin": "imagemin img/* -o dist/img",
+```
+
+### Concatenate, minify, uglify
+```
+npm install --save-dev usemin-cli@0.6.0
+```
+Update scripts (package.json): 
+```
+"usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+```
+[*INCOMPLETE*] Wrap CSS links in <head> with *build:css* and *endbuild* comments
+```
+<!-- build:css css/main.css -->
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<!-- endbuild -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+```
+* Do not include Google fonts.
+
+[*INCOMPLETE*] Wrap JS scripts below </footer> with *build:js* and *endbuild* comments
+```
+<!-- build:js js/main.js -->
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<!-- endbuild -->
+```
+
+### Rimraf: Automate dist/ folder cleanup
+```
+npm install --save-dev rimraf@3.0.2
+```
+package.json: 
+```
+"scripts": {
+    "clean": "rimraf dist",
+```
+
+### Build the distribution folder
+package.json:
+```
+"scripts": {
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+```
+add "dist" to .gitignore:
+```
+node_modules
+dist
+```
+#### RUN: build
+```
+npm run build
+```
