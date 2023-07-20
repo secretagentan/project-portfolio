@@ -19,11 +19,11 @@ npm install lite-server --save-dev
 
 #### Edit package.json
 ```
-  "scripts": {
+"scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run lite",
     "lite": "lite-server"
-  },
+},
 ```
 
 #### Running lite-server
@@ -74,4 +74,47 @@ npm install bootstrap-social@5.1.1
 <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 <link rel="stylesheet" href="css/styles.css" />
+```
+
+### Set up SASS 
+[*INCOMPLETE*] Create the following folder/file:
+```
+css/styles.scss
+```
+#### For Intel Mac - check node version:
+```
+node -v
+```
+For Node version 16.x, enter:
+```
+npm install --save-dev node-sass@6
+```
+#### For Mac w/ M1 chip:
+```
+npm install --save-dev sass
+```
+
+#### Add compilation script in package.json ("scss" under "scripts")
+For Intel Mac:
+```
+"scripts": {
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+For M1 Mac: 
+```
+"scripts": {
+    "lite": "lite-server", 
+    "scss": "sass css:css",
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+
+#### To compile .scss to .css: 
+```
+npm run scss
 ```
