@@ -77,7 +77,7 @@ npm install bootstrap-social@5.1.1
 ```
 
 ### Set up SASS 
-[*INCOMPLETE*] Create the following folder/file:
+Create the following folder/file:
 ```
 css/styles.scss
 ```
@@ -114,7 +114,7 @@ For M1 Mac:
 },
 ```
 
-#### To compile .scss to .css: 
+#### Compile: .scss to .css
 ```
 npm run scss
 ```
