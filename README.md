@@ -41,6 +41,7 @@ node_modules
 ```
 to .gitignore
 
+
 ### Set up jQuery, Popper.js, and Bootstrap (v4.5.2)
 ```
 npm install jquery@3.5.1 popper.js@1.16.1
@@ -118,3 +119,31 @@ For M1 Mac:
 ```
 npm run scss
 ```
+
+#### Set up JS files
+Create the following folder/file: 
+```
+js/scripts.js
+```
+Add the "js/scripts.js" src below the scripts under the </footer> tag: 
+```
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+```
+
+### Set up onchange & parallelshell 
+Inside project folder:
+```
+npm install --save-dev onchange@7.0.0
+npm install --save-dev -E parallelshell@3.0.1
+```
+Update script object in package.json:
+```
+    "start": "npm run watch:all",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+},
+```
+
