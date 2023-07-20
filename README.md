@@ -46,13 +46,13 @@ to .gitignore
 npm install jquery@3.5.1 popper.js@1.16.1
 npm install bootstrap@4.5.2
 ```
-[incomplete] Add the following in the <head> tag
+[*INCOMPLETE*] Add the following in the <head> tag
 ```
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 <!-- Additional CSS must be placed after Bootstrap CSS -->
 <link rel="stylesheet" href="css/styles.css" />
 ```
-[incomplete] Add the following below the closing </footer> tag
+[*INCOMPLETE*] Add the following below the closing </footer> tag
 ```
 </footer>
 
@@ -67,7 +67,7 @@ npm install bootstrap@4.5.2
 npm install font-awesome@4.7.0
 npm install bootstrap-social@5.1.1
 ```
-[incomplete] Update the following in the <head> tag
+[*INCOMPLETE*] Update the following in the <head> tag
 ```
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 <!-- Additional CSS must be placed after Bootstrap CSS -->
