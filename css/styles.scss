@@ -10,3 +10,10 @@ $hero-img: url("/img/img-0026.jpg");
 .carousel_img {
     max-height: 480px;
 }
+
+.site_footer {
+    background-color: #ffe4e1;
+    .list-unstyled a {
+        color: gray;
+    }
+}
