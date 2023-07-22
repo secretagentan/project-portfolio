@@ -1,3 +1,12 @@
+$hero-img: url("/img/img-0026.jpg");
+
+.jumbotron {
+    &.hero_img {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), $hero-img;
+        background-size: cover;
+    }
+}
+
 .site-footer {
     background: thistle;
 }
