@@ -2,5 +2,5 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/img-0026.jpg");
   background-size: cover; }
 
-.site-footer {
-  background: thistle; }
+.carousel_img {
+  max-height: 480px; }

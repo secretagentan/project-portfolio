@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light text-light">
         <a class="navbar-brand" href="#">Hello Airplay</a>
         
         <div class="collapse navbar-collapse text-right">
@@ -57,15 +57,67 @@
     </header>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto pb-4 text-center">
+        <div class="row py-5"><!-- about us -->
+            <div class="col-md-8 mx-auto text-center">
                 <h2>About Us</h2>
                 <p>We are a family owned and operated business based in Corona, California. Elizabeth is our chief designer and balloon stylist. Michael is the chief of operations. With background in events, operations, hospitality, and education. The husband and wife duo are ready to elevate your special occasions and celebrations.</p>
             </div>
         </div>
+
+        <div class="row py-5"><!-- image carousel -->
+            <div class="col-md-8 mx-auto pb-4">
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1"></li>
+                        <li data-target="#homeCarousel" data-slide-to="2"></li>
+                        <li data-target="#homeCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active carousel_img">
+                            <img class="d-block w-100" src="img/jayden.jpg" alt="jayden bounce house" />
+                        </div>
+                        <div class="carousel-item carousel_img">
+                            <img class="d-block w-100" src="img/img-081.jpg" alt="bounce house" />                      
+                        </div>
+                        <div class="carousel-item carousel_img">
+                            <img class="d-block w-100" src="img/image-ball-pit.jpg" alt="ball pit" />                        
+                        </div>
+                        <div class="carousel-item carousel_img">
+                            <img class="d-block w-100" src="img/dsc-5519.jpg" alt="bounce house with girl jumping" />                        
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>  
+                </div>
+            </div>
+        </div><!-- end image carousel -->
+
+        <div class="row pb-5"><!-- testimonials -->
+            <div class="col-md-12 mx-auto my-4 text-center">
+                <h3>Our clients love us!</h3>
+            </div>
+            <div class="col-md-4 text-center">
+                <p>testimonials</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <p>testimonials</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <p>testimonials</p>
+            </div>
+        </div>
     </div>
 
-    <footer class="site-footer">
+    <footer class="bg-dark text-light site_footer">
         <div class="container">
             <div class="row py-4">
                 <!-- <div class="col-md-4 align-self-center">
