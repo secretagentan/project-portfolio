@@ -33,11 +33,10 @@ npm start
 ```
 touch .gitignore
 ```
-Add the text 
+Add the following text inside the .gitignore file
 ```
 node_modules
 ```
-to .gitignore
 
 
 ### jQuery, Popper.js, and Bootstrap (v4.5.2)
@@ -45,13 +44,13 @@ to .gitignore
 npm install jquery@3.5.1 popper.js@1.16.1
 npm install bootstrap@4.5.2
 ```
-[*INCOMPLETE*] Add the following in the <head> tag
+[*INCOMPLETE*] Add the following within the "head" tag
 ```
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 <!-- Additional CSS must be placed after Bootstrap CSS -->
 <link rel="stylesheet" href="css/styles.css" />
 ```
-[*INCOMPLETE*] Add the following below the closing </footer> tag
+[*INCOMPLETE*] Add the following below the closing "footer" tag
 ```
 </footer>
 
@@ -66,7 +65,7 @@ npm install bootstrap@4.5.2
 npm install font-awesome@4.7.0
 npm install bootstrap-social@5.1.1
 ```
-[*INCOMPLETE*] Update the following in the <head> tag
+[*INCOMPLETE*] Update the following within the "head" tag
 ```
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 <!-- Additional CSS must be placed after Bootstrap CSS -->
@@ -123,7 +122,7 @@ Create the following folder/file:
 ```
 js/scripts.js
 ```
-[*INCOMPLETE*] Add the "js/scripts.js" src below the scripts under the </footer> tag: 
+[*INCOMPLETE*] Add the "js/scripts.js" src below the scripts under the "footer" tag: 
 ```
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -172,7 +171,7 @@ Update scripts (package.json):
 ```
 "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
 ```
-[*INCOMPLETE*] Wrap CSS links in <head> with *build:css* and *endbuild* comments
+[*INCOMPLETE*] Wrap CSS links inside "head" with *build:css* and *endbuild* comments
 ```
 <!-- build:css css/main.css -->
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
@@ -184,7 +183,7 @@ Update scripts (package.json):
 ```
 * Do not include Google fonts.
 
-[*INCOMPLETE*] Wrap JS scripts below </footer> with *build:js* and *endbuild* comments
+[*INCOMPLETE*] Wrap JS scripts below closing "footer" with *build:js* and *endbuild* comments
 ```
 <!-- build:js js/main.js -->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
